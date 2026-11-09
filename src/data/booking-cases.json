@@ -1,0 +1,37 @@
+{
+  "valid": [
+    {
+      "case": "deposit not paid",
+      "overrides": { "depositpaid": false }
+    },
+    {
+      "case": "no additional needs",
+      "overrides": { "additionalneeds": "" }
+    },
+    {
+      "case": "free stay (price 0)",
+      "overrides": { "totalprice": 0 }
+    },
+    {
+      "case": "large price",
+      "overrides": { "totalprice": 999999 }
+    },
+    {
+      "case": "single-night stay",
+      "overrides": { "bookingdates": { "checkin": "2027-05-01", "checkout": "2027-05-02" } }
+    },
+    {
+      "case": "stay across a year boundary",
+      "overrides": { "bookingdates": { "checkin": "2027-12-30", "checkout": "2028-01-02" } }
+    },
+    {
+      "case": "accented and non-Latin names",
+      "overrides": { "firstname": "Zoë", "additionalneeds": "Café au lait, 朝食" }
+    },
+    {
+      "case": "hyphenated and apostrophe names",
+      "overrides": { "firstname": "Mary-Jane O'Neil" }
+    }
+  ],
+  "missingRequiredField": ["firstname", "lastname", "totalprice", "depositpaid", "bookingdates"]
+}
