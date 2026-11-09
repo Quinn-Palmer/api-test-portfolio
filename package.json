@@ -1,0 +1,21 @@
+{
+  "name": "api-test-portfolio",
+  "version": "1.0.0",
+  "description": "API test automation suite for the Restful-Booker API using Playwright Test and TypeScript.",
+  "private": true,
+  "author": "Quinn Palmer",
+  "license": "MIT",
+  "type": "commonjs",
+  "scripts": {
+    "test": "playwright test",
+    "test:smoke": "playwright test --grep @smoke",
+    "typecheck": "tsc --noEmit",
+    "report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.65.0",
+    "@types/node": "^26.6.6",
+    "typescript": "^7.0.2",
+    "zod": "^4.6.7"
+  }
+}
